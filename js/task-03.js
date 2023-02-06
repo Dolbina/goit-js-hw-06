@@ -22,24 +22,17 @@ const images = [
   },
 ];
 
+// Вибирає список ul.gallery, в який треба вставити li
+
 const ulGallery = document.querySelector(".gallery");
 
-let createLiEl = document.createElement("li");
-createLiEl.textContent = `<img url: ${images.url}, alt: ${images.alt}/>`;
+// Перебирає та змінює масив, додає строку HTML
 
-  
-console.log(createLiEl);
+const markup = images.map((image) => `<li class="list-item"><img class="img-item" src="${image.url}" alt="${image.alt}"/></li>`).join(""); 
+
+// Додає до DOM усістроки HTML рязом
+
+ulGallery.insertAdjacentHTML("afterbegin", markup);
 
 
 
-// const itemImgEl = images.map((element) => {
-//   const createEl = document.createElement("li");
-
-//    const  = document.createElement("img");
-//   createEl.img = element;
-
-//   return createEl;
-// });
-
-// Додає в DOM-дерево строки
-// ulGallery.insertAdjacentHTML("afterbegin",   );
