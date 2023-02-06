@@ -1,11 +1,3 @@
-// Напиши скрипт для создания галереи изображений по массиву данных. В HTML есть список ul.gallery.
-
-// <ul class="gallery"></ul>
-
-// Используй массив объектов images для создания элементов <img> вложенных в <li>. Для создания разметки используй шаблонные строки и метод insertAdjacentHTML().
-
-// Все элементы галереи должны добавляться в DOM за одну операцию вставки.
-// Добавь минимальное оформление галереи флексбоксами или гридами через CSS классы.
 
 const images = [
   {
@@ -26,11 +18,11 @@ const images = [
 
 const ulGallery = document.querySelector(".gallery");
 
-// Перебирає та змінює масив, додає строку HTML
+// Перебирає та змінює масив, додає строки HTML(данні для картинок з масиву jmages). join (прибирає кому між li, замініє пустим символом "")
 
 const markup = images.map((image) => `<li class="list-item"><img class="img-item" src="${image.url}" alt="${image.alt}"/></li>`).join(""); 
 
-// Додає до DOM усістроки HTML рязом
+// Додає до DOM усі строки HTML разом
 
 ulGallery.insertAdjacentHTML("afterbegin", markup);
 

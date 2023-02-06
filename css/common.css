@@ -26,6 +26,7 @@ button {
 .gallery{
 display: flex;
 gap: 40px;
+align-items: center;
 }
 
 .list-item{
@@ -34,7 +35,7 @@ gap: 40px;
 
 .img-item{
   display: block;
-  width: 1260px;
-  height: 750px;
+  width: 600px;
+  height: 330px;
   
 }
